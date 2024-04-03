@@ -439,11 +439,11 @@ position: relative;
     z-index: 1;
 }
 .project-container {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 20px 20px 20px 20px;
-    justify-content: space-between;
-    gap: 40px; 
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    grid-auto-rows: auto;
+    gap: 40px; /* Gap between grid items */
+    padding: 20px; /* Padding for the container */
 }
 
 .project-box {
@@ -453,9 +453,8 @@ position: relative;
     align-items: center;
     flex-direction: column;
    
-   
-    width: calc(50% - 20px); /* Adjust the width to fit two boxes in one row */
-    height: 250px;
+    width: 100%; /* Each box takes full width of its container */
+    height: 250px; /* Height of each box */
     background: transparent;
     border: 2px solid #fff;
     border-radius: 10px;
